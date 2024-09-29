@@ -1,0 +1,590 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+  
+  <title>Untitled</title>
+  
+  
+  
+  
+<style>
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  width: 90%;
+  height: 100%;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 30px;
+  margin: 1rem 2rem 2rem;
+}
+body :focus {
+  outline: 3px dotted #008576;
+}
+body :placeholder {
+  color: #767676;
+}
+body .header {
+  width: 60%;
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body .header .header-logo {
+  margin-left: -2rem;
+}
+body .header .header-logo img {
+  width: 200px;
+}
+body .header .header-logo a {
+  float: left;
+}
+body .header .club-name {
+  float: left;
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  font-weight: 700;
+  color: #008576;
+}
+body .header .nav {
+  margin-top: -1rem;
+}
+body .header .nav ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  column-gap: 18px;
+}
+body .header .nav ul li a {
+  text-decoration: none;
+  color: #767676;
+  font-weight: 700;
+}
+body .header .nav ul li:last-of-type a {
+  background: #008576;
+  color: #ffffff;
+  padding: 15px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+body .header .mobile-nav-btn {
+  display: none;
+  cursor: pointer;
+}
+body .main {
+  width: 60%;
+  height: 80%;
+}
+body .main .home {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  column-gap: 50px;
+}
+body .main .home .section-left {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+}
+body .main .home .section-left ul {
+  margin-left: 2rem;
+  margin-top: -1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #292929;
+}
+
+body .main .home .section-left p.bullet {
+  margin-left: 1rem;
+  margin-top: -1rem;
+  text-align: left;
+  font-size: 0.9rem;
+  color: #292929;
+}
+body .main .home .section-left p.bullet a {
+  color: #008576;
+  text-decoration: none;
+}
+body .main .home .section-left p.bullet a:hover {
+  text-decoration: underline;
+}
+body .main .home .section-left p.bullet:before {
+  content: "■ ";
+  position: relative;
+  color: #666666;
+  list-style-type: circle;
+  margin-left: 0.8rem;
+}
+body .main .home .section-left .label-header {
+  background: #04a795;
+  padding: 8px 25px;
+  border-radius: 20px;
+  width: fit-content;
+}
+body .main .home .section-left .label-header p {
+  color: #ffffff;
+}
+body .main .home .section-left p {
+  color: #767676;
+}
+body .main .home .section-left .h1 {
+  font-size: 30px;
+  color: #000000;
+  font-weight: 900;
+}
+body .main .home .section-left .h2 {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 900;
+}
+body .main .home .section-left form .form-group {
+  display: flex;
+  column-gap: 10px;
+}
+body .main .home .section-left form .form-group input {
+  background: #ffffff;
+  padding: 10px 15px;
+  width: 230px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+body .main .home .section-left form .form-group button {
+  background: #008576;
+  color: #ffffff;
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+body .main .home .section-right {
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .main .home .section-right svg {
+  width: 40%;
+  position: absolute;
+  top: 200px;
+  left: 30%;
+  transform: scaleX(-1);
+}
+body .main .social {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+body .main .social ul {
+  list-style-type: none;
+  display: flex;
+  column-gap: 12px;
+  justify-content: left;
+}
+body .main .social ul li a svg {
+  width: 30px;
+  fill: #91929a;
+}
+body .footer {
+  height: 10%;
+  width: 60%;
+  display: grid;
+  place-items: center;
+}
+body .footer p {
+  font-size: 14px;
+  font-weight: 900;
+  text-align: center;
+}
+body .footer p a {
+  color: #372865;
+}
+body #mobile-nav {
+  background-color: #04a795;
+  width: 60%;
+  margin: 0px auto;
+  display: none;
+}
+body #mobile-nav .nav {
+  width: 100%;
+  padding: 20px 0px;
+}
+body #mobile-nav .nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  row-gap: 5px;
+}
+body #mobile-nav .nav ul li {
+  width: 100%;
+  padding: 10px;
+}
+body #mobile-nav .nav ul li a {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+body #mobile-nav .nav ul li a:hover {
+  color: black;
+}
+body #mobile-nav.active {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  body .header {
+    width: 75%;
+    height: 20%;
+  }
+  body .main {
+    width: 75%;
+    height: 70%;
+  }
+  body .footer {
+    height: 10%;
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  body .header {
+    width: 90%;
+    height: 20%;
+  }
+  body .main {
+    width: 90%;
+    height: 70%;
+  }
+  body .footer {
+    height: 10%;
+    width: 90%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body {
+    height: auto;
+  }
+  body .header {
+    width: 90%;
+    height: 50px;
+  }
+  body .header .nav {
+    display: none;
+  }
+  body .header .mobile-nav-btn {
+    display: block;
+  }
+  body .main {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  body .main .social {
+    width: 100%;
+    align-items: center;
+  }
+  body .main .home .section-left {
+    width: 100%;
+    align-items: center;
+    row-gap: 35px;
+  }
+  body .main .home .section-left h1 {
+    text-align: center;
+  }
+  body .main .home .section-left p {
+    text-align: center;
+  }
+  body .main .home .section-right {
+    display: none;
+  }
+  body .footer {
+    height: 40px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  body #mobile-nav {
+    width: 90%;
+  }
+  body #mobile-nav.active {
+    display: block;
+  }
+}
+@media screen and (max-width: 767px) {
+  body {
+    height: auto;
+  }
+  body .header {
+    width: 90%;
+    height: 50px;
+    margin-top: 40px;
+  }
+  body .header .nav {
+    display: none;
+  }
+  body .header .mobile-nav-btn {
+    display: block;
+  }
+  body .main {
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+  }
+  body .main .home .section-left {
+    width: 100%;
+    align-items: center;
+    row-gap: 35px;
+  }
+  body .main .home .section-left h1 {
+    text-align: center;
+  }
+  body .main .home .section-left p {
+    text-align: center;
+  }
+  body .main .home .section-left form {
+    width: 100%;
+  }
+  body .main .home .section-left form .form-group {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 15px;
+  }
+  body .main .home .section-left form .form-group input,
+body .main .home .section-left form .form-group button {
+    width: 100%;
+  }
+  body .main .home .section-right {
+    display: none;
+  }
+  body .footer {
+    height: 40px;
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  body #mobile-nav {
+    width: 90%;
+  }
+}
+
+/* tooltipcontainer */
+#tooltipcontainer .toggletip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* the bubble element, added inside the toggletip live region */
+
+#tooltipcontainer .toggletip-bubble {
+  display: inline-block;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 10em;
+  padding: 0.5rem;
+  background: #3e3d3d;
+  color: #fff;
+}
+
+#tooltipcontainer button {
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  border: 0;
+  background: #008576;
+  font-family: serif;
+  font-weight: bold;
+  color: #fff;
+} 
+
+#tooltipcontainer button:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem skyBlue;
+}
+
+</style>
+
+
+  
+  
+</head>
+
+<body>
+<div class="header">
+  <div class="header-logo">
+    <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/d/d8/20220920_090006-removebg-preview.png"  alt="the logo"></a>
+  </div>
+  <div class="nav">
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Series</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Comics</a></li>
+      <li><a href="#">Members</a></li>
+    </ul>
+  </div>
+  <div id="mobile-nav-btn" class="mobile-nav-btn">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Hamburger_icon.svg" alt="Open for dropdown menu.">
+  </div>
+</div>
+
+<div id="mobile-nav">
+  <div class="nav">
+    <ul>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Series</a></li>
+      <li><a href="#">Articles</a></li>
+      <li><a href="#">Comics</a></li>
+      <li><a href="#">Members</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="main">
+  <div class="home">
+    <div class="section-left">
+      
+      
+      <p class="h1">The Office TV series</p>
+      <p>The Office is an American mockumentary sitcom television series that depicts the everyday work lives of office employees at the Scranton, Pennsylvania, branch of the fictional Dunder Mifflin Paper Company. It aired on NBC from March 24, 2005, to May 16, 2013, spanning a total of nine seasons.</p>
+      <p>Le Bureau is the French television show version of The british series, it is directed by Nicolas & Bruno.</p>
+      <p class="h2">Main Characters</p>
+      <p>The Office employs an ensemble cast. Many characters portrayed by The Office cast are based on the <a href="https://en.wikipedia.org/wiki/The_Office_(British_TV_series)" target="_blank" class="external">original British series</a>.</p>
+      <p class="bullet"><a href="#">Creed Bratton</a></p>
+      <p class="bullet"><a href="#">Michael Scott</a></p>
+      <p class="bullet"><a href="#">Angela Noelle</a></p>
+      <p class="bullet"><a href="#">Kevin Malone</a></p>
+      <p class="bullet"><a href="#">Dwight Schrute</a></p>
+        </ul>
+      <p><b>Michael Scott</b></p>
+      <div id="tooltipcontainer">
+      <p>Michael serves as the regional manager of the Scranton, Pennsylvania branch of paper company, Dunder Mifflin Inc. 
+      <span class="toggletip-container">
+        <button type="button"  data-toggletip-content="A fictional paper and office supplies wholesale company.">i</button>
+        <span role="status"></span></p>
+      </span> </div>
+      <p><b>Dwight Schrute</b></p>
+      <p>Dwight's character was a salesman and the assistant to the regional manager.</p>
+      <p><b>Angela Noelle</b></p>
+      <p>Angela is introduced as the senior accountant, head of the Party Planning Committee, and safety officer at the Scranton branch of Dunder Mifflin.</p>
+      <p class="h2">Join the Office Club</p>
+      <form>
+        <div class="form-group">
+          <input type="email" required>
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+      <div class="social">
+        <ul>
+          <li><a href="#"><svg role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z" />
+              </svg></a></li>
+
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" data-prefix="fab" data-icon="instagram-square" class="svg-inline--fa fa-instagram-square fa-w-14" viewBox="0 0 448 512">
+                <title>Connect on our Instagram page.</title>
+                <path d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+              </svg></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="section-right">
+    
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p>This page was intentionally made inaccessible for a class learning activity!</p>
+  <p><small>Wikipedia is the source of the content, <a href="https://commons.wikimedia.org/wiki/File:20220920_090006-removebg-preview.png">logo</a> and graphic.</small></p>
+  <p><small>This page is inspired by <a href="https://web.dev/learn/accessibility/test-assistive-technology/">Learn Accessibility</a></small>.</p>
+  
+</div>
+  
+  
+      <script id="rendered-js" >
+let mobileNavBtn = document.getElementById("mobile-nav-btn");
+let mobileNav = document.getElementById("mobile-nav");
+
+mobileNavBtn.addEventListener("click", function () {
+  if (mobileNav.hasAttribute("class")) {
+    mobileNav.removeAttribute("class");
+  } else {
+    mobileNav.setAttribute("class", "active");
+  }
+});
+    </script>
+
+ 
+<script>
+  (function() {
+    // Get all the toggletip buttons
+    var toggletips = document.querySelectorAll('[data-toggletip-content]');
+  
+    // Iterate over them
+    Array.prototype.forEach.call(toggletips, function (toggletip) {
+      // Get the message from the data-content element
+      var message = toggletip.getAttribute('data-toggletip-content');
+  
+      // Get the live region element
+      var liveRegion = toggletip.nextElementSibling;
+  
+      // Toggle the message
+      toggletip.addEventListener('mouseover', function () {
+          liveRegion.innerHTML = '';
+          window.setTimeout(function() {
+            liveRegion.innerHTML = '<span class="toggletip-bubble">'+ message +'</span>';
+          }, 100);
+      });
+  
+      // Close on outside mouseover
+      document.addEventListener('mouseover', function (e) {
+        if (toggletip !== e.target) {
+          liveRegion.innerHTML = '';
+        }                        
+      });
+  
+      // Remove toggletip on ESC
+      toggletip.addEventListener('keydown', function (e) {
+        if ((e.keyCode || e.which) === 27)
+        liveRegion.innerHTML = '';
+      });
+      
+      // Remove on blur
+      toggletip.addEventListener('blur', function (e) {
+        liveRegion.innerHTML = '';
+      });
+    });
+  }());    
+    </script>
+    
+</body>
+
+</html>
